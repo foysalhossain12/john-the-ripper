@@ -35,7 +35,7 @@ Best Command :
 
 
 
-### Example Hash For Crack Using John the ripper:
+### Example Hash For Crack hash Using John the ripper:
 
        1.f9d4049dd6a4dc35d40e5265954b2a46    -----
 
@@ -59,20 +59,21 @@ Best Command :
 
 1.Convert  RSA private key into Hash using ssh2john.py 
   
-    Command :
+      Command :
 
-    /usr/share/john/ssh2john.py target_rsa_file > name.hash
+               /usr/share/john/ssh2john.py target_rsa_file > name.hash
 
 2. Crack  name.hash value using john the ripper
       
-    Command:
+       Command:
 
-    john name.hash --wordlist=/usr/share/wordlist/rockyou.txt
+             john name.hash --wordlist=/usr/share/wordlist/rockyou.txt
 
 3. Use this  password for  SSH Login  
 
-Bonush:
-            ssh -i  rsa_private_key username@ip
+
+         Bonush:
+                 ssh -i  rsa_private_key username@ip
 
    
 ### ----    Zip File Password Crack --------
@@ -85,16 +86,19 @@ Bonush:
 
 
 2. Crack password :
-                              john --wordlist=/usr/share/wordlists/rockyou.txt zip_hash.txt
+                    
+		    john --wordlist=/usr/share/wordlists/rockyou.txt zip_hash.txt
 
    
 ### ------- Rar File Password Crack --------
 
 1.Convert into Hash:
-                              rar2john rarfile.rar > rar_hash.txt
+                      
+		    rar2john rarfile.rar > rar_hash.txt
 
 2.Crack password:
-                        john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt
+                       
+		   john --wordlist=/usr/share/wordlists/rockyou.txt rar_hash.txt
 
 
 
