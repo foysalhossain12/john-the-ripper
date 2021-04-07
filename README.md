@@ -3,21 +3,21 @@
 
 
 
--------------------------  John The Ripper Part 1 : ---------------------------
+### -------------------------  John The Ripper Part 1 - Crack Hash  : ---------------------------
 
 
 
 
 Basic Command:
 
-                        john target_file
+                       john target_file
                        
                        Example: 
                                        john hash.txt
 
-                        john modes target_file
+                       john modes target_file
 	
-                        Example:
+                       Example:
                                        john --single hash.txt
 
                                        john --wordlist hash.txt
@@ -34,26 +34,28 @@ Best Command :
                                        john --format=raw-md5 --wordlist=/usr/share/wordlist/rockyou.txt hash.txt
 
 
-Hash:
-        1.f9d4049dd6a4dc35d40e5265954b2a46 ------- 
 
-       2.b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3 -----letmein
+### Example Hash For Crack Using John the ripper:
+
+       1.f9d4049dd6a4dc35d40e5265954b2a46    -----
+
+       2.b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3  -----
 
        3.1C8BFE8F801D79745C4631D09FFF36C82AA37FC4CCE4FC946683D7B336B63032 ----
 
-Note :
+### Note :
           Cracked Hash store in .pot path 
         
            /// john.pot ///
 
       
-  # John the ripper part 2:
+### John the ripper part 2 - crack zip,rar file and ssh private key password :
   
   
 
---------------John the ripper Part 2 ---------------
+     
 
----------- SSH - RSA private key crack  --------
+### ---------- SSH - RSA private key crack  --------
 
 1.Convert  RSA private key into Hash using ssh2john.py 
   
@@ -73,7 +75,7 @@ Bonush:
             ssh -i  rsa_private_key username@ip
 
    
-          ----    Zip File Password Crack --------
+### ----    Zip File Password Crack --------
 
 1. Convert the content of  target zip file into hash value 
 
@@ -85,8 +87,8 @@ Bonush:
 2. Crack password :
                               john --wordlist=/usr/share/wordlists/rockyou.txt zip_hash.txt
 
-          
-          ------- Rar File Password Crack --------
+   
+### ------- Rar File Password Crack --------
 
 1.Convert into Hash:
                               rar2john rarfile.rar > rar_hash.txt
